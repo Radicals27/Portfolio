@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: white;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: white;
+	background: rgba(202, 202, 180, 0.8);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: white;
+	background: rgba(202, 202, 180, 0.8);
+}
+
+  
+/* Mobile, by default */
+/* Remove the horizontal adjustment when the scroll bar appears */
+html {
+	overflow-y: scroll;
+}
+
+/* Background image with gradient */
+body {
+	/* background-image: linear-gradient(to bottom right, #E5F7FF, #98DEFF); */
+	font-size: 1em;
+	line-height: normal;
+	color: #ffffff;
+	word-wrap:break-word !important;
+	font-family: Karla;
+}
+
+	/* Fade in animation when loading */
+.fade {
+	-webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+	-moz-animation: fadein 1s; /* Firefox < 16 */
+	-ms-animation: fadein 1s; /* Internet Explorer */
+	-o-animation: fadein 1s; /* Opera < 12.1 */
+	animation: fadein 1s;
+}
+
+/* Keyframes for the fade-in animation */
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Handles the fixed-size business card appearance on the center of the screen */
+.card {
+	background-color: white;
+	box-shadow: 5px 5px 8px 5px #888888;
+	width: 100%;
+	height: 100vh;
+}
+
+/* When the card appears longer on scrollable pages it is long_card */
+.long_card {
+	background-color: white;
+	box-shadow: 5px 5px 8px 5px #888888;
+	width: 100%;
+	margin-bottom: 40px;
+	padding-bottom: 40px;
+}
+
+.h1 {
+	font-size: 2em;
+	color: #4D6F80;
+	padding-left: 40px;
+}
+
+.h2 {
+	font-size: 1.5em;
+	color: #4D6F80;
+	padding-left: 40px;
+}
+
+/* The layout of the coding icons on the "work" page */
+#icons_layout {
+	display: flex;
+	justify-content: space-between;
+	height: auto;
+	width: auto;
+}
+
+#icons_layout img {
+	display: flex;
+	width: 5vw;
+}
+
+/* navigation bar */
+nav {
+	margin: 0;
+	background-color: rgb(255, 255, 255);
+}
+
+nav ul {
+	padding: 0px;
+	margin: 0;
+	list-style: none;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+}
+	
+nav ul li {
+	padding: 1vw;
+	text-align: center;
+	background-color: rgb(255, 255, 255);
+	white-space: nowrap;
+	width: 100%;
+	}
+
+nav a {
+	display: block;
+	padding: 0px;	
+	color:#737B80;
+	font-size: 0.8em;
+	font-weight: bold;
+	text-decoration:none;
+}
+
+/* when mouse hovers over nav bar, a small shadow appears behind */
+nav a:hover { 
+	text-shadow: 1px 1px #7AB2CC;
+}
+
+/* Holds the elements on the "about" page */
+.about_container {
+	color: #4D6F80;
+	font-size: 1.2em;
+	font-style: italic;
+	margin: 4vh;
+}
+
+.about_container img {
+	width: 100%;
+}
+
+/* container to hold all "post" elements in the "blog" page */
+.post_container {
+	margin: 0 10vw 0 10vw;
+}
+
+/* An individual post on the "blog" page */
+.post {
+	display:grid;
+	grid-gap: 15px;
+	grid-template-rows: 1fr 2fr 4fr;
+	grid-template-columns: 1fr;
+	height: auto;
+
+	color: #4D6F80;
+	font-size: 1em;
+	font-style: italic;
+	margin-top: 10vh;
+	padding-bottom: 5vh;
+	border-bottom: 3px solid rgb(200, 226, 243);
+}
+
+.post post_heading {
+	grid-row: 1 / 2;
+	font-size: 1.5em;
+}
+
+.post_body {
+	grid-row: 2 / 3;
+}
+
+.post img {
+	justify-self: center;
+	grid-row: 3 / 4;
+	width: 100%;
+	max-width: 600px;
+	height: auto;
+}
+
+/* The container for the "work" page elements */
+.work_container {
+	color: #4D6F80;
+	font-size: 1.2em;
+	font-style: italic;
+	margin: 4vh;
+}
+
+.work_container a {
+	color: #4D6F80;
+	font-style: italic;
+}
+
+.work_container .app_img {
+	width: 100%;
+	max-width: 800px;
+}
+
+.work_container .center {
+	text-align: center;
+}
+
+/* The container for the "contact" page elements */
+.contact_container {
+	display: flex;
+	margin: auto;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.contact_method img {
+	margin-top: 5vh;
+	height: auto;
+	width: 10vw;
+}
+
+/* Tablet */
+@media screen and (min-width : 361px) and (max-width : 1024px) {
+	.card {
+		background-color: white;
+		margin: auto;
+		box-shadow: 5px 5px 8px 5px #888888;
+		height: 60vh;
+		width: 97vw;
+
+	}
+
+	.long_card {
+		background-color: white;
+		margin: auto;
+		box-shadow: 5px 5px 8px 5px #888888;
+		width: 97vw;
+	}
+}
+
+/* Desktop */
+@media screen and (min-width : 1025px) {
+	body {
+		margin-top: 20vh;
+		margin-bottom: 20vh;
+		font-size: 3em;
+	}
+	
+	.card {
+		background-color: white;
+		margin: auto;
+		box-shadow: 101px 48px 97px 75px rgba(198,199,175,1);
+		height: 60vh;
+		width: 60vw;
+	}
+
+	.long_card {
+		background-color: white;
+		margin: auto;
+		box-shadow: 101px 48px 97px 75px rgba(198,199,175,1);
+		width: 60vw;
+	}
+
+	nav {
+		margin: 0 0 0 3vw;
+		background-color: rgb(255, 255, 255);
+	}
+	
+	nav ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		position: relative;
+		}
+		
+	nav ul li {
+		display: flex;
+		width: 7vw;
+		text-align: center;
+		background-color: rgb(255, 255, 255, 0);
+		}
+	
+	nav a {
+		display:block;
+		padding:0 10px;	
+		color:#737B80;
+		font-size:20px;
+		font-weight: bold;
+		line-height: 60px;
+		text-decoration:none;
+	}
+
+	.h1 {
+		font-size: 1.4em;
+		color: #4D6F80;
+		padding-left: 40px;
+	}
+	
+	.h2 {
+		font-size: 1em;
+		color: #4D6F80;
+		padding-left: 40px;
+	}
+
+	.post_container {
+		margin: 0 2vw 0 2vw;
+	}
+
+	.post {
+		color: #4D6F80;
+		font-size: 0.4em;
+		font-style: italic;
+		margin-top: 10vh;
+	}
+
+	.photo {
+		text-align: center;
+		margin-bottom: 5vh;
+		height: auto;
+		width: 100%; 
+	}
+	
+	.photo img {
+		margin-top: 30px;
+		width: 100%;
+		height: auto;
+	}
+
+	.contact_container {
+		margin-top: 3vh;
+	}
+
+	.contact_container .contact_method {
+		padding-left: 3vw;
+		padding-right: 3vw;
+	}
+
+	.contact_method img {
+		width: 4vw;
+		height: auto;
+	}
+
+	.work_container {
+		color: #4D6F80;
+		font-size: 0.4em;
+		font-style: italic;
+		margin: 4vh;
+	}
+	
+	.work_container a {
+		color: #4D6F80;
+		font-style: italic;
+	}
+
+	.about_container {
+		color: #4D6F80;
+		font-size: 0.5em;
+		font-style: italic;
+		margin: 4vh;
+	}
+}
