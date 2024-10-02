@@ -136,6 +136,8 @@ nav ul {
 	position: relative;
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
+    list-style-type: none;
 }
 	
 nav ul li {
@@ -200,6 +202,11 @@ nav a:hover {
 
 .post_body {
 	grid-row: 2 / 3;
+}
+
+.portrait_gif {
+    width: 300px;  /* Set the desired width */
+    height: auto;  /* Maintain aspect ratio */
 }
 
 .post img {
