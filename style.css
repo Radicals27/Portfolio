@@ -311,9 +311,68 @@ td {
 
 .thumbnail:hover {
     animation-play-state: running;
-    /* Play the video when hovering */
 }
 
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Ensure it's above everything */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw; /* 80% of the viewport width */
+    height: 80vh; /* 80% of the viewport height */
+    background-color: white;
+    border-radius: 10px; /* Optional: Rounding the corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adding shadow */
+    overflow: hidden; /* Make sure content doesn’t overflow */
+}
+
+.modal-content {
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box; /* Ensure padding doesn't affect overall size */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Spread content top-to-bottom */
+}
+
+#modal-title, 
+#modal-description {
+	text-align: center; /* Center the text */
+    margin: 0; /* Optional: Remove default margins */
+    color: black; /* Change to your desired text color */
+}
+
+#modal-media {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; /* Center the video horizontally */
+    align-items: center; /* Center the video vertically */
+	gap: 20px; /* Add horizontal space between the videos */
+}
+
+#modal-media video {
+    height: 300px; /* Set a fixed height */
+    width: auto;   /* Maintain the aspect ratio */
+    max-width: 100%; /* Ensure it doesn’t exceed the modal width */
+    max-height: 100%; /* Ensure it doesn’t exceed the modal height */
+}
+
+.close {
+	color: black; /* Change to your desired text color */
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+video {
+    color: black;
+}
 /* Tablet */
 @media screen and (min-width : 361px) and (max-width : 1024px) {
 	.card {
