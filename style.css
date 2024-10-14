@@ -253,6 +253,67 @@ nav a:hover {
 	width: 10vw;
 }
 
+table, th{
+	width: 100%;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.table_header {
+	text-align: center;
+}
+
+td {
+	width: 50%;
+	border: 1px solid black;
+	padding: 10px;
+	color: black; /* Default text color */
+	font-size: 20px;
+}
+
+.table_cell_shrink {
+	width: 30vw;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+.portfolio-item {
+    width: 100%;
+    position: relative;
+}
+
+.thumbnail {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+    /* Start playing on hover */
+    animation-play-state: running;
+}
+
+.thumbnail::-webkit-media-controls {
+    display: none !important;
+}
+
+.thumbnail {
+    animation-play-state: paused;
+}
+
+.thumbnail:hover {
+    animation-play-state: running;
+    /* Play the video when hovering */
+}
+
 /* Tablet */
 @media screen and (min-width : 361px) and (max-width : 1024px) {
 	.card {
