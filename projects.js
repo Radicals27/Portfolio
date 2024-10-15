@@ -89,22 +89,6 @@ export const projects = [
         ]
     },
     {
-        title: "Internet Of Things Designer",
-        description: "(Unity, 2020) A mobile app to assist laying out devices around one's home for IoT.",
-        thumbnail: "./video/Neca01.mp4",
-        videos: [
-            "./video/Neca01.mp4", 
-            "./video/Neca02.mp4",
-            "./video/Neca03.mp4",
-            "./video/Neca04.mp4",
-        ],
-        learnings: [
-            "Explored VR development tools and frameworks.",
-            "Learned about user experience in virtual environments.",
-            "Collaborated with a team to enhance project outcomes."
-        ]
-    },
-    {
         title: "Overhead Awareness",
         description: "(Unity, 2023) A mobile app to train electricians in how to be safe with overhead hazards.",
         thumbnail: "./video/OHA01.mp4",
@@ -187,6 +171,66 @@ export const projects = [
             "./video/WFH04.mp4",
             "./video/WFH05.mp4",
             "./video/WFH06.mp4",
+        ],
+        learnings: [
+            "Explored VR development tools and frameworks.",
+            "Learned about user experience in virtual environments.",
+            "Collaborated with a team to enhance project outcomes."
+        ]
+    },
+    {
+        title: "Internet Of Things Designer",
+        description: "(Unity, 2020) A mobile app to assist laying out devices around one's home for IoT.",
+        thumbnail: "./video/Neca01.mp4",
+        videos: [
+            "./video/Neca01.mp4", 
+            "./video/Neca02.mp4",
+            "./video/Neca03.mp4",
+            "./video/Neca04.mp4",
+        ],
+        learnings: [
+            "Explored VR development tools and frameworks.",
+            "Learned about user experience in virtual environments.",
+            "Collaborated with a team to enhance project outcomes."
+        ]
+    },
+    {
+        title: "Pete Simulator",
+        description: "(Unity, 2021) A present for Secret Santa that I made for my boss, Pete.",
+        thumbnail: "./video/PeteSim01.mp4",
+        videos: [
+            "./video/PeteSim01.mp4", 
+            "./video/PeteSim02.mp4",
+        ],
+        learnings: [
+            "Explored VR development tools and frameworks.",
+            "Learned about user experience in virtual environments.",
+            "Collaborated with a team to enhance project outcomes."
+        ]
+    },
+    {
+        title: "Alien Standup",
+        description: "(Unity, 2020-2021) A mobile game that is a mix between mad libs and Mastermind.  Try to figure out the Alien language via stand up comedy.",
+        thumbnail: "./video/AlienStandup01.mp4",
+        videos: [
+            "./video/AlienStandup01.mp4", 
+            "./video/AlienStandup02.mp4",
+        ],
+        learnings: [
+            "Explored VR development tools and frameworks.",
+            "Learned about user experience in virtual environments.",
+            "Collaborated with a team to enhance project outcomes."
+        ]
+    },
+    {
+        title: "Danny's Defense",
+        description: "(Unity, 2022) Another Secret Santa gift I made for a work colleague - Danny.  Defend the lunch room from garlic (which he was allergic  to), whilst using all of his favourite tools, a ping pong paddle, a guitar, tea, a laptop and ginger beer grenades.",
+        thumbnail: "./video/DannyD01.mp4",
+        videos: [
+            "./video/DannyD01.mp4", 
+            "./video/DannyD02.mp4",
+            "./video/DannyD03.mp4",
+            "./video/DannyD04.mp4",
         ],
         learnings: [
             "Explored VR development tools and frameworks.",
