@@ -277,9 +277,18 @@ td {
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 15px;
-    padding: 20px;
+    padding: 10px;
+}
+
+.portfolio-grid video {
+    max-height: 15vh; /* Set a maximum height for thumbnails */
+    max-width: 100%; /* Ensure the video never exceeds the width of its grid container */
+    object-fit: contain; /* Maintain the aspect ratio without cropping */
+    display: block; /* Remove any inline spacing around videos */
+    margin: 0 auto; /* Center the video horizontally */
+    width: 100%; /* Make sure the video takes up the full width of the grid cell */
 }
 
 .portfolio-item {
@@ -298,13 +307,11 @@ td {
     height: auto;
     cursor: pointer;
     object-fit: cover;
-    transition: transform 0.3s ease;
 }
 
 .thumbnail:hover {
     transform: scale(1.05);
     /* Start playing on hover */
-    animation-play-state: running;
 }
 
 .thumbnail::-webkit-media-controls {
@@ -313,10 +320,6 @@ td {
 
 #thumbnail {
 	cursor: pointer;
-}
-
-.thumbnail:hover {
-    animation-play-state: running;
 }
 
 /* Modal styles */
@@ -401,20 +404,9 @@ td {
 }
 
 video {
-    color: white;
 	cursor: pointer;
 }
 
-@keyframes playVideo {
-    0% {
-        /* Use the `animation-play-state` to play the video */
-        animation-play-state: running; /* Play video */
-    }
-    100% {
-        /* Pause the video when the hover ends */
-        animation-play-state: paused; /* Pause video */
-    }
-}
 
 /* Tablet */
 @media screen and (min-width : 361px) and (max-width : 1024px) {
