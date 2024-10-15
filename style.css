@@ -340,6 +340,8 @@ td {
 }
 
 #modal-title, 
+#modal-learnings,
+#modal-learnings-title,
 #modal-description {
 	text-align: center; /* Center the text */
     margin: 0; /* Optional: Remove default margins */
@@ -361,7 +363,7 @@ td {
     max-height: 100%; /* Ensure it doesn’t exceed the modal height */
 }
 
-.close {
+#close-modal {
 	color: black; /* Change to your desired text color */
     position: absolute;
     top: 10px;

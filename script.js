@@ -1,58 +1,43 @@
-// Handle hover play/pause functionality
-document.querySelectorAll('.thumbnail').forEach(video => {
-    video.addEventListener('mouseover', () => {
-        video.play();
+import { projects } from './projects.js';
+
+// Define the openModal function
+function openModal(projectIndex) {
+    const project = projects[projectIndex];
+
+    // Set the title and description
+    document.getElementById("modal-title").innerText = project.title;
+    document.getElementById("modal-description").innerText = project.description;
+
+    // Load videos into the modal
+    const modalMedia = document.getElementById("modal-media");
+    modalMedia.innerHTML = `
+        <video controls>
+            <source src="${project.video01}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video controls>
+            <source src="${project.video02}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    `;
+
+    // Load learnings into the modal
+    const modalLearnings = document.getElementById("modal-learnings");
+    modalLearnings.innerHTML = ""; // Clear existing learnings
+    project.learnings.forEach(learning => {
+        const li = document.createElement("li");
+        li.innerText = learning;
+        modalLearnings.appendChild(li);
     });
-    video.addEventListener('mouseout', () => {
-        video.pause();
-        video.currentTime = 0; // Reset the video to the start
-    });
-});
 
-// Handle modal functionality
-const modal = document.getElementById('modal');
-const modalTitle = document.getElementById('modal-title');
-const modalDescription = document.getElementById('modal-description');
-const modalMedia = document.getElementById('modal-media');
-const closeModal = document.querySelector('.close');
+    // Show the modal
+    document.getElementById("modal").style.display = "block";
+}
 
-// Close the modal when the user clicks the close button
-closeModal.onclick = function() {
-    modal.style.display = 'none';
-    modalMedia.innerHTML = ''; // Clear media content when modal is closed
-};
+// Attach openModal to the window object for global access
+window.openModal = openModal;
 
-// Close the modal if user clicks outside of it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = 'none';
-        modalMedia.innerHTML = ''; // Clear media content when modal is closed
-    }
-};
-
-// Show modal with project info and media on click
-document.querySelectorAll('.portfolio-item').forEach(item => {
-    item.addEventListener('click', () => {
-        const projectTitle = item.getAttribute('project-title');
-        const projectDescription = item.getAttribute('project-description');
-        const projectVideo01 = item.getAttribute('data-video01');
-        const projectVideo02 = item.getAttribute('data-video02');
-        
-        modalTitle.textContent = projectTitle;
-        modalDescription.textContent = projectDescription;
-        
-        // Load the media into the modal
-        modalMedia.innerHTML = `
-            <video controls>
-                <source src="${projectVideo01}" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <video controls>
-                <source src="${projectVideo02}" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        `;
-        
-        modal.style.display = 'flex'; // Show the modal (with flex to center it)
-    });
+// Add event listener for closing the modal
+document.getElementById("close-modal").addEventListener("click", function() {
+    document.getElementById("modal").style.display = "none"; // Hide the modal
 });
