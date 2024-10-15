@@ -10,13 +10,31 @@ document.addEventListener("DOMContentLoaded", () => {
         projectDiv.onclick = () => openModal(index); // Ensure openModal is defined
 
         projectDiv.innerHTML = `
-            <video muted width="100%">
+            <video class="thumbnail" muted width="100%">
                 <source src="${project.thumbnail}" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
+                
         `;
 
         projectContainer.appendChild(projectDiv);
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Select all thumbnail videos
+    const thumbnails = document.querySelectorAll('.thumbnail');
+
+    thumbnails.forEach(thumbnail => {
+        // Add event listeners for mouseenter and mouseleave
+        thumbnail.addEventListener('mouseenter', function () {
+            this.play(); // Play the video on hover
+        });
+
+        thumbnail.addEventListener('mouseleave', function () {
+            this.pause(); // Pause the video when not hovered
+            this.currentTime = 0; // Optionally reset the video to the beginning
+        });
     });
 });
 
@@ -46,6 +64,7 @@ function openModal(projectIndex) {
     modalLearnings.innerHTML = ""; // Clear existing learnings
     project.learnings.forEach(learning => {
         const li = document.createElement("li");
+        li.className = "learnings-list-element"
         li.innerText = learning;
         modalLearnings.appendChild(li);
     });
