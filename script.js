@@ -48,16 +48,18 @@ function openModal(projectIndex) {
 
     // Load videos into the modal
     const modalMedia = document.getElementById("modal-media");
-    modalMedia.innerHTML = `
-        <video controls>
-            <source src="${project.video01}" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <video controls>
-            <source src="${project.video02}" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    `;
+    modalMedia.innerHTML = '';
+
+    // Loop through the videos array and add video elements dynamically
+    project.videos.forEach((videoSrc) => {
+        const videoElement = `
+            <video controls>
+                <source src="${videoSrc}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        `;
+        modalMedia.innerHTML += videoElement; // Append each video element
+    });
 
     // Load learnings into the modal
     const modalLearnings = document.getElementById("modal-learnings");
