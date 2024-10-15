@@ -1,233 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conrad Close | Personal Projects</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Conrad Close | Portfolio</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
 
-<body>
-    <div class="long_card">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="about.html">About</a> </li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <br><br>
-        <div class="h1">
-            Projects:
-        </div>
-
-        <div class="portfolio-grid">
-
-            <div class="project" onclick="openModal(0)">
-                <video muted width="100%">
-                    <source src="video/DefyCombat01.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <h3>Project 1</h3>
+    <body>
+        <div class="long_card">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About</a> </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <br><br>
+            <div class="h1">
+                Projects:
             </div>
 
-
-            <div class="portfolio-item" 
-                 project-title="Lunar MR Multiplayer Experience" 
-                 project-description="This app was about...."
-                 data-video01="video/Arose02.mp4" 
-                 data-video02="video/Arose03.mp4" >
-                <video class="thumbnail" muted loop preload="metadata">
-                    <source src="video/Arose01.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+            <div class="portfolio-grid" id="project-container">
+                <!-- This will be populated by JavaScript -->
             </div>
 
-            <div class="portfolio-item" 
-                project-title="Doping Control In Sports"
-                project-description="This app was about...."
-                data-video01="video/DC01.mp4" 
-                data-video02="video/DC02.mp4" >
-                <video class="thumbnail" muted loop preload="metadata">
-                    <source src="video/DC01.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        
-            <div class="portfolio-item" 
-                project-title="Drone Combat" 
-                project-description="This app was about...."
-                data-video01="video/DefyCombat01.mp4" 
-                data-video02="video/DefyCombat02.mp4" >
-                <video class="thumbnail" muted loop preload="metadata">
-                    <source src="video/DefyCombat01.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="portfolio-item" 
-                project-title="Drone Racing" 
-                project-description="This app was about...."
-                data-video01="video/DefyTime.mp4" 
-                data-video02="video/DefyTime.mp4" >
-                <video class="thumbnail" muted loop preload="metadata">
-                    <source src="video/DefyTime01.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="portfolio-item" 
-                project-title="Low Level Order Picker Training" 
-                project-description="This app was about...."
-                data-video01="video/LLOP01.mp4" 
-                data-video02="video/LLOP02.mp4" >
-                <video class="thumbnail" muted loop preload="metadata">
-                    <source src="video/LLOP01.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="portfolio-item" 
-                project-title="Air Conditioner Ad" 
-                project-description="This app was about...."
-                data-video01="video/Nano01.mp4" 
-                data-video02="video/Nano02.mp4" >
-                <video class="thumbnail" muted loop preload="metadata">
-                    <source src="video/Nano01.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="portfolio-item" 
-                project-title="Overhead Awareness" 
-                project-description="This app was about...."
-                data-video01="video/OHA01.mp4" 
-                data-video02="video/OHA02.mp4" >
-                <video class="thumbnail" muted loop preload="metadata">
-                    <source src="video/OHA01.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="portfolio-item" 
-                project-title="Servonauts Design" 
-                project-description="This app was about...."
-                data-video01="video/Servo01.mp4" 
-                data-video02="video/Servo02.mp4" >
-                <video class="thumbnail" muted loop preload="metadata">
-                    <source src="video/Servo01.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="portfolio-item" 
-                project-title="High Voltage Switching" 
-                project-description="This app was about...."
-                data-video01="video/Switching01.mp4" 
-                data-video02="video/Switching02.mp4" >
-                <video class="thumbnail" muted loop preload="metadata">
-                    <source src="video/Switching01.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="portfolio-item" 
-                project-title="Test & Verify" 
-                project-description="This app was about...."
-                data-video01="video/TNV01.mp4" 
-                data-video02="video/TNV02.mp4" >
-                <video class="thumbnail" muted loop preload="metadata">
-                    <source src="video/TNV01.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="portfolio-item" 
-                project-title="Personal Safety Alarm Ad" 
-                project-description="This app was about...."
-                data-video01="video/Tunstall01.mp4" 
-                data-video02="video/Tunstall01.mp4" >
-                <video class="thumbnail" muted loop preload="metadata">
-                    <source src="video/Tunstall01.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="portfolio-item" 
-                project-title="Working From Heights" 
-                project-description="This app was about...."
-                data-video01="video/WFH01.mp4" 
-                data-video02="video/WFH02.mp4" >
-                <video class="thumbnail" muted loop preload="metadata">
-                    <source src="video/WFH01.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="portfolio-item" 
-                project-title="Internet Of Things Designer" 
-                project-description="This app was about...."
-                data-video01="video/Neca01.mp4" 
-                data-video02="video/Neca02.mp4" >
-                <video class="thumbnail" muted loop preload="metadata">
-                    <source src="video/Neca01.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <!-- Personal Projects -->
-            <div class="portfolio-item" 
-                project-title="Alien Standup" 
-                project-description="This app was about...."
-                data-video01="video/AlienStandup01.mp4" 
-                data-video02="video/AlienStandup02.mp4" >
-                <video class="thumbnail" muted loop preload="metadata">
-                    <source src="video/AlienStandup01.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="portfolio-item" 
-                project-title="Salvage" 
-                project-description="This app was about...."
-                data-video01="video/Salvage01.mp4" 
-                data-video02="video/Salvage02.mp4" >
-                <video class="thumbnail" muted loop preload="metadata">
-                    <source src="video/Salvage01.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="portfolio-item" 
-                project-title="Pete Simulator" 
-                project-description="This app was about...."
-                data-video01="video/PeteSim01.mp4" 
-                data-video02="video/PeteSim02.mp4" >
-                <video class="thumbnail" muted loop preload="metadata">
-                    <source src="video/PeteSim01.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="portfolio-item" 
-                project-title="Danny's Defense" 
-                project-description="This app was about...."
-                data-video01="video/DannyDefense01.mp4" 
-                data-video02="video/DannyDefense02.mp4" >
-                <video class="thumbnail" muted loop preload="metadata">
-                    <source src="video/DannyDefense01.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-
-        <!-- Modal window -->
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <span id="close-modal" class="close-button">&times;</span> <!-- Close button as 'X' -->
-                <h3 id="modal-title">Project Title</h3>
-                <h5 id="modal-description">Here is the project description.</h5>
-                <br>
-                <h6 id="modal-learnings-title">Learnings:</h6>
-                <ul id="modal-learnings"></ul> <!-- Add this line for the learnings -->
-                <div id="modal-media">
-                    <!-- Media content will go here -->
+            <!-- Modal window -->
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span id="close-modal" class="close-button">&times;</span> <!-- Close button as 'X' -->
+                    <h3 id="modal-title">Project Title</h3>
+                    <h5 id="modal-description">Here is the project description.</h5>
+                    <br>
+                    <h6 id="modal-learnings-title">Learnings:</h6>
+                    <ul id="modal-learnings"></ul> <!-- Add this line for the learnings -->
+                    <div id="modal-media">
+                        <!-- Media content will go here -->
+                    </div>
+                    
                 </div>
-                
             </div>
         </div>
-    </div>
 
-    <script type="module" src="./about.html"></script> <!-- Link to the new projects.js file -->
-    <script type="module" src="./script.js"></script> <!-- Your main script file -->
-</body>
+        <script type="module" src="./projects.js"></script>
+        <script type="module" src="./script.js"></script>
+
+    </body>
 
 </html>

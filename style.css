@@ -309,6 +309,10 @@ td {
     animation-play-state: paused;
 }
 
+#thumbnail {
+	cursor: pointer;
+}
+
 .thumbnail:hover {
     animation-play-state: running;
 }
@@ -374,6 +378,7 @@ td {
 
 video {
     color: black;
+	cursor: pointer;
 }
 /* Tablet */
 @media screen and (min-width : 361px) and (max-width : 1024px) {

@@ -1,5 +1,25 @@
 import { projects } from './projects.js';
 
+document.addEventListener("DOMContentLoaded", () => {
+    const projectContainer = document.getElementById("project-container");
+
+    // Loop through the projects array and create the HTML
+    projects.forEach((project, index) => {
+        const projectDiv = document.createElement("div");
+        projectDiv.className = "project";
+        projectDiv.onclick = () => openModal(index); // Ensure openModal is defined
+
+        projectDiv.innerHTML = `
+            <video muted width="100%">
+                <source src="${project.thumbnail}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        `;
+
+        projectContainer.appendChild(projectDiv);
+    });
+});
+
 // Define the openModal function
 function openModal(projectIndex) {
     const project = projects[projectIndex];

@@ -3,7 +3,8 @@ export const projects = [
     {
         title: "Project 1",
         description: "This project showcases the development of a responsive web application.",
-        video01: "path/to/project1-video1.mp4",
+        thumbnail: "./video/Arose01.mp4",
+        video01: "/video/Arose1.mp4",
         video02: "path/to/project1-video2.mp4",
         learnings: [
             "Learned about responsive design techniques.",
@@ -14,6 +15,7 @@ export const projects = [
     {
         title: "Project 2",
         description: "An immersive virtual reality experience built for educational purposes.",
+        thumbnail: "./video/Arose01.mp4",
         video01: "path/to/project2-video1.mp4",
         video02: "path/to/project2-video2.mp4",
         learnings: [
