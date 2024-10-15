@@ -14,12 +14,13 @@ export const projects = [
         learnings: [
             "Sequencer",
             "Multiplayer",
-            "Colocation"
+            "Colocation",
+            "Extremely fast project timeline (4 weeks)"
         ]
     },
     {
         title: "Doping Control In Sports",
-        description: "(Unity, 2022) An educational VR application designed to walk people through the process of doping control.",
+        description: "(Unity, 2022, Quest & WebGL) An educational VR application designed to walk people through the process of doping control.",
         thumbnail: "./posters/DC.png",
         videos: [
             "./video/DC01.mp4", 
@@ -27,23 +28,23 @@ export const projects = [
             "./video/DC03.mp4",
         ],
         learnings: [
-            "Explored VR development tools and frameworks.",
-            "Learned about user experience in virtual environments.",
-            "Collaborated with a team to enhance project outcomes."
+            "Worked on both Android/Quest & WebGL (First time using WebGL)",
+            "Had very specific client requirements to follow",
+            "Designed & implemented the tutorial & sample jars pouring sequence",
         ]
     },
     {
         title: "Drone Combat",
-        description: "(Unity, 2022) A drone combat AR mobile game.",
+        description: "(Unity, 2022, Mobile/AR) A drone combat AR mobile game.",
         thumbnail: "./posters/DefyCombat.png",
         videos: [
             "./video/DefyCombat01.mp4", 
             "./video/DefyCombat02.mp4"
         ],
         learnings: [
-            "Explored VR development tools and frameworks.",
-            "Learned about user experience in virtual environments.",
-            "Collaborated with a team to enhance project outcomes."
+            "Was principal developer",
+            "Worked closely with artists to generate a rapid prototype",
+            "Designed & Implemented drone AI behaviour as well as core gameplay loop",
         ]
     },
     {
@@ -54,23 +55,7 @@ export const projects = [
             "./video/DefyTime01.mp4", 
         ],
         learnings: [
-            "Explored VR development tools and frameworks.",
-            "Learned about user experience in virtual environments.",
-            "Collaborated with a team to enhance project outcomes."
-        ]
-    },
-    {
-        title: "Low Level Order Picker Training",
-        description: "(Unity, 2024) LLOP training for drivers in the warehouse.",
-        thumbnail: "./posters/LLOP.png",
-        videos: [
-            "./video/LLOP01.mp4", 
-            "./video/LLOP02.mp4"
-        ],
-        learnings: [
-            "Explored VR development tools and frameworks.",
-            "Learned about user experience in virtual environments.",
-            "Collaborated with a team to enhance project outcomes."
+            "First time using PlayCanvas",
         ]
     },
     {
@@ -83,9 +68,12 @@ export const projects = [
             "./video/Nano03.mp4",
         ],
         learnings: [
-            "Explored VR development tools and frameworks.",
-            "Learned about user experience in virtual environments.",
-            "Collaborated with a team to enhance project outcomes."
+            "Worked for a high-profile client with very specific needs",
+            "Rapid iteration times between change implementations and client feedback",
+            "Learned how to use Sequencer",
+            "Learned how to use VFX graph",
+            "Learned how to use Unity Timelines",
+            "Implemented all audio and sourced SFX",
         ]
     },
     {
@@ -97,9 +85,8 @@ export const projects = [
             "./video/OHA02.mp4", 
         ],
         learnings: [
-            "Explored VR development tools and frameworks.",
-            "Learned about user experience in virtual environments.",
-            "Collaborated with a team to enhance project outcomes."
+            "Developed tools to allow clients to create their own scenarios more easily",
+            "Created several scenarios specific to client requirements",
         ]
     },
     {
@@ -112,9 +99,10 @@ export const projects = [
             "./video/Servo03.mp4",
         ],
         learnings: [
-            "Explored VR development tools and frameworks.",
-            "Learned about user experience in virtual environments.",
-            "Collaborated with a team to enhance project outcomes."
+            "Experimented with various obstacles such as oil slicks and conveyor belts",
+            "Prototyped several levels",
+            "Implemented 'juice' such as screen shake, dust particles and more",
+            "Implemented player spawn 'skybeam' effect",
         ]
     },
     {
@@ -127,9 +115,9 @@ export const projects = [
             "./video/Switching03.mp4",
         ],
         learnings: [
-            "Explored VR development tools and frameworks.",
-            "Learned about user experience in virtual environments.",
-            "Collaborated with a team to enhance project outcomes."
+            "Further developed a tool that allows the client to create their own scenarios and apps",
+            "Designed and implemented an LRS-integration system to track user progress through the app, and update LRS on completion",
+            "Created a user-facing GUI to allow configuration of LRS system",
         ]
     },
     {
@@ -142,9 +130,10 @@ export const projects = [
             "./video/TNV03.mp4",
         ],
         learnings: [
-            "Explored VR development tools and frameworks.",
-            "Learned about user experience in virtual environments.",
-            "Collaborated with a team to enhance project outcomes."
+            "Created an app that trains electricians in how to test and verify electrical setups in people's homes.",
+            "Implemented a chaperone character system to walk the user through the app",
+            "Created the audio system to play SFX, VO and ambience",
+            "Worked closely with artists to request and implement new art assets",
         ]
     },
     {
@@ -155,9 +144,10 @@ export const projects = [
             "./video/Tunstall01.mp4", 
         ],
         learnings: [
-            "Explored VR development tools and frameworks.",
-            "Learned about user experience in virtual environments.",
-            "Collaborated with a team to enhance project outcomes."
+            "Assisted with filming actors",
+            "Principal developer on project",
+            "First time using 360 video",
+            "Created Audio system and directional arrow system to guide user to face correct direction",
         ]
     },
     {
@@ -173,9 +163,27 @@ export const projects = [
             "./video/WFH06.mp4",
         ],
         learnings: [
-            "Explored VR development tools and frameworks.",
-            "Learned about user experience in virtual environments.",
-            "Collaborated with a team to enhance project outcomes."
+            "Ongoing multi-year project where I became principal developer.",
+            "2 platforms - Quest and iOS/iPad, with 2 implementations - forklift and LLOP.",
+            "Eventually we designed and implemented a custom hardware controller utilising real forklift controls and integrated it into the app for improved immersion.",
+            "The app utlised an LRS integration system for user progress tracking.",
+            "Designed and implemented the audio system.",
+            "Designed and implemented the tutorial.",
+        ]
+    },
+    {
+        title: "Low Level Order Picker Training",
+        description: "(Unity, 2024) LLOP training for drivers in the warehouse.",
+        thumbnail: "./posters/LLOP.png",
+        videos: [
+            "./video/LLOP01.mp4", 
+            "./video/LLOP02.mp4"
+        ],
+        learnings: [
+            "Modified the 'Work From Heights' (WFH) project and changed the forklift to a LLOP.",
+            "Sourced new VO and SFX.",
+            "Modified the WFH rules and behaviours accordingly.",
+            "Began designing and implementing the LLOP hardware control rig.",
         ]
     },
     {
@@ -189,42 +197,44 @@ export const projects = [
             "./video/Neca04.mp4",
         ],
         learnings: [
-            "Explored VR development tools and frameworks.",
-            "Learned about user experience in virtual environments.",
-            "Collaborated with a team to enhance project outcomes."
+            "First AR app I worked on.",
+            "Drew on a database of appliances the user could place around their home",
+            "Implemented scenarios where the user had to place items in appropriate places and be marked on the quality of this."
         ]
     },
     {
         title: "Pete Simulator",
-        description: "(Unity, 2021) A present for Secret Santa that I made for my boss, Pete.",
+        description: "(Unity, 2021, WebGL) A present for Secret Santa that I made for my boss, Pete.",
         thumbnail: "./posters/PeteSim.png",
         videos: [
             "./video/PeteSim01.mp4", 
             "./video/PeteSim02.mp4",
         ],
         learnings: [
-            "Explored VR development tools and frameworks.",
-            "Learned about user experience in virtual environments.",
-            "Collaborated with a team to enhance project outcomes."
+            "Created hand-drawn sprites of each colleague, animated them.",
+            "Created custom events that player had to 'fix'.",
+            "Sourced and implemented various SFX, music and art assets."
         ]
     },
     {
         title: "Alien Standup",
-        description: "(Unity, 2020-2021) A mobile game that is a mix between mad libs and Mastermind.  Try to figure out the Alien language via stand up comedy.",
+        description: "(Unity, 2020-2021, Android & WebGL) A mobile game that is a mix between mad libs and Mastermind.  Try to figure out the Alien language via stand up comedy.",
         thumbnail: "./posters/AlienStandup.png",
         videos: [
             "./video/AlienStandup01.mp4", 
             "./video/AlienStandup02.mp4",
         ],
         learnings: [
-            "Explored VR development tools and frameworks.",
-            "Learned about user experience in virtual environments.",
-            "Collaborated with a team to enhance project outcomes."
+            "The first game I released to the public; on Play store & itch.io.",
+            "Worked with an artist overseas to source sprites and animate them.",
+            "Tracked player progress through the app using local storage.",
+            "Created database of words for player to play with",
+            "Went through entire project lifecycle from idea, to implementation, to store upload."
         ]
     },
     {
         title: "Danny's Defense",
-        description: "(Unity, 2022) Another Secret Santa gift I made for a work colleague - Danny.  Defend the lunch room from garlic (which he was allergic  to), whilst using all of his favourite tools, a ping pong paddle, a guitar, tea, a laptop and ginger beer grenades.",
+        description: "(Unity, 2022) Another Secret Santa gift I made for a work colleague - Danny.  Up to 16 players defend the lunch room from garlic (which he was allergic  to), whilst using all of his favourite tools, a ping pong paddle, a guitar, tea, a laptop and ginger beer grenades.",
         thumbnail: "./posters/DannyDefense.png",
         videos: [
             "./video/DannyD01.mp4", 
@@ -233,9 +243,11 @@ export const projects = [
             "./video/DannyD04.mp4",
         ],
         learnings: [
-            "Explored VR development tools and frameworks.",
-            "Learned about user experience in virtual environments.",
-            "Collaborated with a team to enhance project outcomes."
+            "First time exploring multiplayer.",
+            "Used Photon/Pun package",
+            "Learned how to use Blender to model, texture and rig a human model as well as a guitar, ping pong paddle, mug, laptop, ginger beer and garlic characters.",
+            "100+ hour project, for fun.",
+            "Learned a lot about project structure and how to plan for performance."
         ]
     },
 ];
