@@ -208,9 +208,9 @@ export const projects = [
     {
         title: "VR game (Under NDA - Quest, Pico, Vive, PSVR, PCVR)",
         description: "Worked on a popular VR title that has sold over a million copies.  Assisted with porting to various headsets as well as updated the EULA across each headset available including PCVR, Quest, Pico, PSVR1, PSVR2 & Vive.",
-        thumbnail: "./img/VR.png",
+        thumbnail: "./img/VR.jpg",
         images: [
-            "./img/VR.png",
+            "./img/VR.jpg",
         ],
         learnings: [
             "Principal developer on Pico port.",

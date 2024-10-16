@@ -17,25 +17,31 @@ document.addEventListener("DOMContentLoaded", () => {
             </video>
             `;
         }
+        else {
+            projectDiv.innerHTML = `
+            <img class="thumbnail" src="${project.thumbnail}"></img>
+            `;
+        }
 
         projectContainer.appendChild(projectDiv);
     });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Select all thumbnail videos
+
     const thumbnails = document.querySelectorAll('.thumbnail');
 
     thumbnails.forEach(thumbnail => {
-        // Add event listeners for mouseenter and mouseleave
-        thumbnail.addEventListener('mouseenter', function () {
-            this.play(); // Play the video on hover
-        });
+        if (thumbnail.tagName.toLowerCase() === 'video') {
+            thumbnail.addEventListener('mouseenter', function () {
+                this.play(); // Play the video on hover
+            });
 
-        thumbnail.addEventListener('mouseleave', function () {
-            this.pause(); // Pause the video when not hovered
-            this.currentTime = 0; // Optionally reset the video to the beginning
-        });
+            thumbnail.addEventListener('mouseleave', function () {
+                this.pause(); // Pause the video when not hovered
+                this.currentTime = 0; // Optionally reset the video to the beginning
+            });
+        }
     });
 });
 
@@ -51,16 +57,17 @@ function openModal(projectIndex) {
     const modalMedia = document.getElementById("modal-media");
     modalMedia.innerHTML = '';
 
-    // Loop through the videos array and add video elements dynamically
-    project.videos.forEach((videoSrc) => {
-        const videoElement = `
-            <video controls>
-                <source src="${videoSrc}" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        `;
-        modalMedia.innerHTML += videoElement; // Append each video element
-    });
+    if(project.videos != null) {
+        project.videos.forEach((videoSrc) => {
+            const videoElement = `
+                <video controls>
+                    <source src="${videoSrc}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            `;
+            modalMedia.innerHTML += videoElement; // Append each video element
+        });
+    }  
 
     // Load learnings into the modal
     const modalLearnings = document.getElementById("modal-learnings");
