@@ -1,5 +1,7 @@
 import { projects } from './projects.js';
 
+let currentProjectIndex = 0; // Track the currently opened project index
+
 document.addEventListener("DOMContentLoaded", () => {
     const projectContainer = document.getElementById("project-container");
 
@@ -47,6 +49,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Define the openModal function
 function openModal(projectIndex) {
+    currentProjectIndex = projectIndex;
+
     const project = projects[projectIndex];
 
     // Set the title and description
@@ -91,6 +95,23 @@ function openModal(projectIndex) {
     // Show the modal
     document.getElementById("modal").style.display = "block";
 }
+
+// Function to handle keydown event for navigating between projects
+function handleKeydown(event) {
+    if (event.key === "ArrowLeft") {
+        // Go to the previous project if not at the start
+        if (currentProjectIndex > 0) {
+            openModal(currentProjectIndex - 1);
+        }
+    } else if (event.key === "ArrowRight") {
+        // Go to the next project if not at the end
+        if (currentProjectIndex < projects.length - 1) {
+            openModal(currentProjectIndex + 1);
+        }
+    }
+}
+
+document.addEventListener("keydown", handleKeydown);
 
 // Attach openModal to the window object for global access
 window.openModal = openModal;

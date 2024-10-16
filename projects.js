@@ -207,7 +207,7 @@ export const projects = [
     },
     {
         title: "VR game (Under NDA - Quest, Pico, Vive, PSVR, PCVR)",
-        description: "Worked on a popular VR title that has sold over a million copies.  Assisted with porting to various headsets as well as updated the EULA across each headset available including PCVR, Quest, Pico, PSVR1, PSVR2 & Vive.",
+        description: "Worked on a popular VR title that has sold over a million copies worldwide.  Assisted with porting to various headsets as well as updated the EULA across each headset available including PCVR, Quest, Pico, PSVR1, PSVR2 & Vive.",
         thumbnail: "./img/VR.jpg",
         images: [
             "./img/VR.jpg",
@@ -215,9 +215,9 @@ export const projects = [
         learnings: [
             "Principal developer on Vive XR Elite port.",
             "Updated EULA and associated behaviour across PCVR, Pico, Vive, PSVR1/2 & Quest headsets.",
-            "Learned more about Playstation development",
+            "Learned more about Playstation development.",
             "Assisted with development of a DLC pack/level.",
-            "Created a modified version of app for a one-time expo",
+            "Created a modified version of app for a one-time expo.",
         ]
     },
     {
