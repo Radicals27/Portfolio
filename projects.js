@@ -206,6 +206,21 @@ export const projects = [
         ]
     },
     {
+        title: "VR game (Under NDA - Quest, Pico, Vive, PSVR, PCVR)",
+        description: "Worked on a popular VR title that has sold over a million copies.  Assisted with porting to various headsets as well as updated the EULA across each headset available including PCVR, Quest, Pico, PSVR1, PSVR2 & Vive.",
+        thumbnail: "./img/VR.png",
+        images: [
+            "./img/VR.png",
+        ],
+        learnings: [
+            "Principal developer on Pico port.",
+            "Updated EULA and associated behaviour across PCVR, Pico, Vive, PSVR1/2 & Quest headsets.",
+            "Learned more about Playstation development",
+            "Assisted with development of a DLC pack/level.",
+            "Created a modified version of app for a one-time expo",
+        ]
+    },
+    {
         title: "Pete Simulator",
         description: "(Unity, 2021, WebGL) A present for Secret Santa that I made for my boss, Pete.",
         thumbnail: "./posters/PeteSim.png",
@@ -252,5 +267,5 @@ export const projects = [
             "100+ hour project, for fun.",
             "Learned a lot about project structure and how to plan for performance."
         ]
-    },
+    }
 ];
