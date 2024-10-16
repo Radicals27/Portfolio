@@ -47,6 +47,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// Function to handle left arrow click
+document.getElementById("prev-project").addEventListener("click", function () {
+    if (currentProjectIndex > 0) {
+        openModal(currentProjectIndex - 1);
+    }
+});
+
+// Function to handle right arrow click
+document.getElementById("next-project").addEventListener("click", function () {
+    if (currentProjectIndex < projects.length - 1) {
+        openModal(currentProjectIndex + 1);
+    }
+});
+
 // Define the openModal function
 function openModal(projectIndex) {
     currentProjectIndex = projectIndex;

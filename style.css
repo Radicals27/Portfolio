@@ -277,6 +277,20 @@ td {
 	cursor: pointer;
 }
 
+.modal-header {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Align arrows and title vertically */
+    gap: 20px; /* Add some space between the arrows and title */
+}
+
+.arrow-link {
+    font-size: 24px; /* Make the arrow links bigger */
+    text-decoration: none; /* Remove underline */
+    color: #000; /* Arrow color */
+    cursor: pointer;
+}
+
 /* Modal styles */
 .modal {
     display: none; /* Hidden by default */
@@ -305,6 +319,7 @@ td {
 }
 
 #modal-title {
+	display: inline-block;
 	font-size: 40px;
 	text-align: center; /* Center the text */
     margin: 0; /* Optional: Remove default margins */
