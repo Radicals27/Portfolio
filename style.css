@@ -174,71 +174,6 @@ nav a:hover {
 	width: 100%;
 }
 
-/* container to hold all "post" elements in the "blog" page */
-.post_container {
-	margin: 0 10vw 0 10vw;
-}
-
-/* An individual post on the "blog" page */
-.post {
-	display:grid;
-	grid-gap: 15px;
-	grid-template-rows: 1fr 2fr 4fr;
-	grid-template-columns: 1fr;
-	height: auto;
-
-	color: #4D6F80;
-	font-size: 1em;
-	font-style: italic;
-	margin-top: 10vh;
-	padding-bottom: 5vh;
-	border-bottom: 3px solid rgb(200, 226, 243);
-}
-
-.post post_heading {
-	grid-row: 1 / 2;
-	font-size: 1.5em;
-}
-
-.post_body {
-	grid-row: 2 / 3;
-}
-
-.portrait_gif {
-    width: 300px;  /* Set the desired width */
-    height: auto;  /* Maintain aspect ratio */
-}
-
-.post img {
-	justify-self: center;
-	grid-row: 3 / 4;
-	width: 100%;
-	max-width: 600px;
-	height: auto;
-}
-
-/* The container for the "work" page elements */
-.work_container {
-	color: #4D6F80;
-	font-size: 1.2em;
-	font-style: italic;
-	margin: 4vh;
-}
-
-.work_container a {
-	color: #4D6F80;
-	font-style: italic;
-}
-
-.work_container .app_img {
-	width: 100%;
-	max-width: 800px;
-}
-
-.work_container .center {
-	text-align: center;
-}
-
 /* The container for the "contact" page elements */
 .contact_container {
 	display: flex;
@@ -273,6 +208,13 @@ td {
 
 .table_cell_shrink {
 	width: 30vw;
+}
+
+.subtitle {
+	font-size: 0.5em;
+	color: #4D6F80;
+	padding-left: 40px;
+	text-align: left;
 }
 
 .portfolio-grid {
