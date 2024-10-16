@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Conrad Close | Portfolio</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+
+    <body>
+        <div class="long_card">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About</a> </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <br><br>
+            <div class="h1">
+                Portfolio:
+            </div>
+            <br>
+            <div class="portfolio-grid" id="project-container">
+                <!-- This will be populated by JavaScript -->
+            </div>
+
+            <!-- Modal window -->
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span id="close-modal" class="close-button">&times;</span> <!-- Close button as 'X' -->
+                    <h3 id="modal-title">Project Title</h3>
+                    <h5 id="modal-description">Here is the project description.</h5>
+                    <br>
+                    <h6 id="modal-learnings-title">Learnings:</h6>
+                    <ul id="modal-learnings"></ul> <!-- Add this line for the learnings -->
+                    <div id="modal-media">
+                        <!-- Media content will go here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="module" src="./projects.js"></script>
+        <script type="module" src="./script.js"></script>
+
+    </body>
+</html>

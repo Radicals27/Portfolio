@@ -253,6 +253,179 @@ nav a:hover {
 	width: 10vw;
 }
 
+table, th{
+	width: 100%;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.table_header {
+	text-align: center;
+}
+
+td {
+	width: 50%;
+	border: 1px solid black;
+	padding: 10px;
+	color: black; /* Default text color */
+	font-size: 20px;
+}
+
+.table_cell_shrink {
+	width: 30vw;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 10px;
+}
+
+.portfolio-grid video {
+    max-height: 15vh; /* Set a maximum height for thumbnails */
+    max-width: 100%; /* Ensure the video never exceeds the width of its grid container */
+    object-fit: contain; /* Maintain the aspect ratio without cropping */
+    display: block; /* Remove any inline spacing around videos */
+    margin: 0 auto; /* Center the video horizontally */
+    width: 100%; /* Make sure the video takes up the full width of the grid cell */
+}
+
+.portfolio-item {
+    width: 100%;
+    position: relative;
+}
+
+.learnings-list-element {
+	list-style-type: none; /* Remove bullet points */
+	padding: 0; /* Remove default padding */
+	margin: 0; /* Remove default margin */
+}
+
+.thumbnail {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+    /* Start playing on hover */
+}
+
+.thumbnail::-webkit-media-controls {
+    display: none !important;
+}
+
+#thumbnail {
+	cursor: pointer;
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Ensure it's above everything */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw; /* 80% of the viewport width */
+    height: 80vh; /* 80% of the viewport height */
+    border-radius: 10px; /* Optional: Rounding the corners */
+    overflow: hidden; /* Make sure content doesn’t overflow */
+}
+
+.modal-content {
+	position: relative;
+    background-color: white;
+    padding: 20px;
+    width: 80%;
+    height: 80%; /* Limit the modal height to 80% of the screen */
+    max-width: 100%;
+    margin: auto;
+    border-radius: 10px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#modal-title {
+	font-size: 40px;
+	text-align: center; /* Center the text */
+    margin: 0; /* Optional: Remove default margins */
+    color: black; /* Change to your desired text color */
+}
+
+#modal-description {
+	font-size: 20px;
+	text-align: center; /* Center the text */
+    margin: 0; /* Optional: Remove default margins */
+    color: black; /* Change to your desired text color */
+}
+
+#modal-learnings-title {
+	font-size: 20px;
+	text-align: center; /* Center the text */
+    margin: 0; /* Optional: Remove default margins */
+    color: black; /* Change to your desired text color */
+}
+
+#modal-learnings {
+    font-size: 20px;
+	text-align: center; /* Center the text */
+    margin: 0; /* Optional: Remove default margins */
+    color: black; /* Change to your desired text color */
+}
+
+#modal-media {
+    max-width: 900px; /* Limit the overall width of the grid for centering */
+    margin: 0 auto; /* Center the grid container horizontally */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid with up to 3 columns */
+    grid-gap: 20px; /* Gap between videos */
+    margin-top: 20px;
+    justify-content: center; /* Center the grid horizontally */
+}
+
+.modal-image {
+	width: 500px;
+}
+
+#modal-media video {
+    width: 100%; /* Ensure videos fill their grid cell */
+    height: auto;
+    max-height: 300px; /* Limit the height */
+}
+
+#close-modal {
+	color: black; /* Change to your desired text color */
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* Scrollbar styling (optional) */
+.modal-content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+video {
+	cursor: pointer;
+}
+
+ul {
+    list-style-type: none; /* Remove the bullet points */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
 /* Tablet */
 @media screen and (min-width : 361px) and (max-width : 1024px) {
 	.card {
@@ -261,7 +434,6 @@ nav a:hover {
 		box-shadow: 5px 5px 8px 5px #888888;
 		height: 60vh;
 		width: 97vw;
-
 	}
 
 	.long_card {
