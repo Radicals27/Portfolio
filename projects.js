@@ -162,6 +162,9 @@ export const projects = [
             "./video/WFH05.mp4",
             "./video/WFH06.mp4",
         ],
+        images: [
+            "./img/WFHController.png",
+        ],
         learnings: [
             "Ongoing multi-year project where I became principal developer.",
             "2 platforms - Quest and iOS/iPad, with 2 implementations - forklift and LLOP.",

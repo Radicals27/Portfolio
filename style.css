@@ -387,6 +387,10 @@ td {
     justify-content: center; /* Center the grid horizontally */
 }
 
+.modal-image {
+	width: 500px;
+}
+
 #modal-media video {
     width: 100%; /* Ensure videos fill their grid cell */
     height: auto;
