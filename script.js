@@ -70,12 +70,14 @@ function openModal(projectIndex) {
         modalLearnings.appendChild(li);
     });
 
-    project.images.forEach((image) => {
-        const imageElement = `
-            <img class="modal-image" src="${image}"></img>
-        `;
-        modalMedia.innerHTML += imageElement; // Append each image
-    });
+    if(project.images != null) {
+        project.images.forEach((image) => {
+            const imageElement = `
+                <img class="modal-image" src="${image}"></img>
+            `;
+            modalMedia.innerHTML += imageElement; // Append each image
+        });
+    }
 
     // Show the modal
     document.getElementById("modal").style.display = "block";
