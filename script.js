@@ -9,12 +9,14 @@ document.addEventListener("DOMContentLoaded", () => {
         projectDiv.className = "project";
         projectDiv.onclick = () => openModal(index); // Ensure openModal is defined
 
-        projectDiv.innerHTML = `
+        if(project.videos != null) {
+            projectDiv.innerHTML = `
             <video class="thumbnail" muted width="100%" preload="none" poster="${project.thumbnail}">
                 <source src="${project.videos[0]}" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-        `;
+            `;
+        }
 
         projectContainer.appendChild(projectDiv);
     });
