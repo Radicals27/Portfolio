@@ -224,7 +224,7 @@ export const projects = [
         description: "(Unity, 2020-2021, Android & WebGL) A mobile game that is a mix between mad libs and Mastermind.  Try to figure out the Alien language via stand up comedy.",
         thumbnail: "./posters/AlienStandup.png",
         videos: [
-            "./video/AlienStandup01.mp4", 
+            "https://github.com/Radicals27/Portfolio/blob/master/video/AlienStandup01.mp4", 
             "./video/AlienStandup02.mp4",
         ],
         learnings: [
