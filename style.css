@@ -215,6 +215,19 @@ td {
 	color: #4D6F80;
 	padding-left: 40px;
 	text-align: left;
+    text-decoration: none;
+}
+
+.subtitle-link {
+	font-size: 0.6em;
+	color: #4D6F80;
+	padding-left: 40px;
+	text-align: left;
+    text-decoration: none;
+}
+
+.subtitle-link:hover {
+    color: #ff4500; /* Optional: change color on hover */
 }
 
 .portfolio-grid {
