@@ -213,7 +213,7 @@ export const projects = [
             "./img/VR.jpg",
         ],
         learnings: [
-            "Principal developer on Pico port.",
+            "Principal developer on Vive XR Elite port.",
             "Updated EULA and associated behaviour across PCVR, Pico, Vive, PSVR1/2 & Quest headsets.",
             "Learned more about Playstation development",
             "Assisted with development of a DLC pack/level.",
