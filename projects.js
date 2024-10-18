@@ -34,6 +34,25 @@ export const projects = [
         ]
     },
     {
+        title: "Ethical Decision Making In Sport",
+        description: "(Unity, 2020) A choose-your-own-adventure style training app to make athletes aware of the consequences of their choices.",
+        thumbnail: "./posters/ED.png",
+        videos: [
+            "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/ED01.mp4",
+            "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/ED02.mp4",
+            "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/ED03.mp4",
+            "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/ED04.mp4",
+            "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/ED05.mp4",
+
+        ],
+        learnings: [
+            "Created dialogue using a dialogue-tree-branching package.",
+            "Recorded Voiceover lines that were used in game.",
+            "Sourced Voiceover lines from voice actors.",
+            "Created several shader graph effects.",
+        ]
+    },
+    {
         title: "Drone Combat",
         description: "(Unity, 2022, Mobile/AR) A drone combat AR mobile game.",
         thumbnail: "./posters/DefyCombat.png",
@@ -148,6 +167,23 @@ export const projects = [
             "Principal developer on project",
             "First time using 360 video",
             "Created Audio system and directional arrow system to guide user to face correct direction",
+        ]
+    },
+    ,
+    {
+        title: "Truck Driver Training App",
+        description: "(Unity, Mobile, 2020-2021) A training app for truck drivers to ensure safe driving practices. Rolled out nationally to thousands of drivers.",
+        thumbnail: "./posters/Truck.png",
+        videos: [
+            "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/Truck01.mp4", 
+            "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/Truck02.mp4", 
+            "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/Truck03.mp4", 
+            "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/Truck04.mp4", 
+            "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/Truck05.mp4", 
+        ],
+        learnings: [
+            "Sourced SFX, ambience and voiceover lines.",
+            "Created the interactable controls sequence with accelerator/brake, emergency brake and hazard light interactables.",
         ]
     },
     {
