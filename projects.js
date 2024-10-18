@@ -38,8 +38,8 @@ export const projects = [
         description: "(Unity, VR, 2020) A choose-your-own-adventure style training app to make athletes aware of the consequences of their choices.",
         thumbnail: "./posters/ED.png",
         videos: [
-            "https://www.youtube.com/watch?v=in-x1BSrr04",
             "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/ED01.mp4",
+            "https://www.youtube.com/watch?v=in-x1BSrr04",
             "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/ED02.mp4",
             "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/ED03.mp4",
             "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/ED04.mp4",
@@ -114,9 +114,9 @@ export const projects = [
         description: "(Unity, Desktop & Switch, 2023) Created various prototypes for conveyor belts and hazards for Servonauts game.",
         thumbnail: "./posters/Servonauts.png",
         videos: [
+            "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/Servo01.mp4", 
             "https://www.youtube.com/watch?v=DxI3BZQB--M",
             "https://www.youtube.com/watch?v=Swo5oLDr--Y",
-            "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/Servo01.mp4", 
             "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/Servo02.mp4",
             "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/Servo03.mp4",
         ],
