@@ -92,7 +92,7 @@ function openModal(projectIndex) {
             } else {
                 // If it's an MP4 video
                 videoElement = `
-                    <video controls muted preload="none" poster="${project.thumbnail}">
+                    <video controls muted">
                         <source src="${videoSrc}" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
