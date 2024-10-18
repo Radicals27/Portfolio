@@ -3,7 +3,6 @@
 /* width */
 ::-webkit-scrollbar {
 	width: 10px;
-
 }
 
 /* Track */
@@ -410,6 +409,56 @@ ul {
     list-style-type: none; /* Remove the bullet points */
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
+}
+
+/* Tech Stack Section Styles */
+#tech-stack-section {
+    margin-top: 40px; /* Add some spacing from the portfolio section */
+    text-align: center;
+}
+
+#tech-stack th {
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 1.1em;
+	color: #4D6F80;
+	border: none; /* Ensure no border around the table */
+}
+
+/* Tech Stack Table Styles */
+#tech-stack {
+    width: 100%;
+    margin: auto;
+    border-collapse: collapse; /* Remove table borders */
+	border: none; /* Ensure no border around the table */
+}
+
+#tech-stack tr, #tech-stack td {
+    border: none; /* Remove any borders around table rows and cells */
+    padding: 10px 20px;
+    text-align: center;
+}
+
+#tech-stack th:first-child, #tech-stack td:first-child {
+	padding-left: 5vw;
+    width: 10vw; /* Set the width of the Framework column to 10% of the viewport width */
+}
+
+#framework {
+	font-size: 0.7em;
+	color: #4D6F80;
+}
+
+#tech-stack td {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+/* Star Ratings */
+.stars {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2em; /* Adjust star size */
+    color: #FFD700; /* Gold color for stars */
 }
 
 /* Tablet */
