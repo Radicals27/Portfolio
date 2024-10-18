@@ -77,12 +77,28 @@ function openModal(projectIndex) {
 
     if(project.videos != null) {
         project.videos.forEach((videoSrc) => {
-            const videoElement = `
-                <video controls>
-                    <source src="${videoSrc}" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            `;
+            let videoElement = '';
+
+            if (videoSrc.includes('youtube.com') || videoSrc.includes('youtu.be')) {  // If the video is a YouTube URL
+                const videoId = getYouTubeID(videoSrc); // Extract the YouTube video ID
+                videoElement = `
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/${videoId}" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
+                    </div>
+                `;
+            } else {
+                // If it's an MP4 video
+                videoElement = `
+                    <video controls muted preload="none" poster="${project.thumbnail}">
+                        <source src="${videoSrc}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                `;
+            }
+
             modalMedia.innerHTML += videoElement; // Append each video element
         });
     }  
@@ -123,6 +139,12 @@ function handleKeydown(event) {
             openModal(currentProjectIndex + 1);
         }
     }
+}
+
+function getYouTubeID(url) {
+    const regex = /(?:youtube\.com\/(?:[^\/]+\/[^\/]+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})/;
+    const matches = url.match(regex);
+    return matches ? matches[1] : null;
 }
 
 document.addEventListener("keydown", handleKeydown);
