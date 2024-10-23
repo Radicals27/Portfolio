@@ -109,6 +109,12 @@ body {
 	padding-left: 40px;
 }
 
+.plain_text {
+	text-align: center;
+	font-size: 0.6em;
+	color: #4D6F80;
+}
+
 /* The layout of the coding icons on the "work" page */
 #icons_layout {
 	display: flex;
