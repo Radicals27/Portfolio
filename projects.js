@@ -10,6 +10,8 @@ export const projects = [
             "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/Arose03.mp4", 
             "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/Arose04.mp4", 
             "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/Arose05.mp4", 
+            "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/Arose06.mp4", 
+            "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/Arose07.mp4", 
         ],
         learnings: [
             "Sequencer.",
@@ -41,10 +43,7 @@ export const projects = [
             "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/ED01.mp4",
             "https://www.youtube.com/watch?v=in-x1BSrr04",
             "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/ED02.mp4",
-            "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/ED03.mp4",
-            "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/ED04.mp4",
-            "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/ED05.mp4",
-
+            "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/ED03.mp4"
         ],
         learnings: [
             "Created dialogue using a dialogue-tree-branching package.",
@@ -84,8 +83,7 @@ export const projects = [
         thumbnail: "./posters/Nano.png",
         videos: [
             "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/Nano01.mp4", 
-            "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/Nano02.mp4",
-            "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/Nano03.mp4",
+            "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/Nano02.mp4"
         ],
         learnings: [
             "Worked for a high-profile client with very specific needs.",
@@ -234,9 +232,7 @@ export const projects = [
         thumbnail: "./posters/Neca.png",
         videos: [
             "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/Neca01.mp4", 
-            "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/Neca02.mp4",
-            "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/Neca03.mp4",
-            "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/Neca04.mp4",
+            "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/Neca02.mp4"
         ],
         learnings: [
             "First AR app I worked on.",
