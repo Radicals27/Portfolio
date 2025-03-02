@@ -349,7 +349,6 @@ export const projects = [
             "First time using Vue.js.",
         ]
     },
-    ,
     {
         title: "Movie Idea Generator",
         description: "(Vue/JS, 2020) A random movie idea generator to help overcome creative blocks. View the live page here: https://radicals27.github.io/MoviePlotGenerator/",
@@ -359,7 +358,20 @@ export const projects = [
             "https://raw.githubusercontent.com/Radicals27/MoviePlotGenerator/master/screenshot.png",
         ],
         learnings: [
-            "First time using Vue.js.",
+            "Second time using Vue.js.",
+        ]
+    },
+    {
+        title: "Movie Recommender",
+        description: "(Dotnet MVC, 2025) A movie recommender that uses the TMDB API to recommend movies based on the user's input.",
+        thumbnail: "./posters/movieRecommender01.png",
+        category: "dotnet",
+        images: [
+            "./posters/movieRecommender01.png",
+            "./posters/movieRecommender02.png",
+        ],
+        learnings: [
+            "First time using dotnet to interact with an API.",
         ]
     },
 ];
