@@ -109,6 +109,12 @@ body {
 	padding-left: 40px;
 }
 
+.h3 {
+	font-size: 1em;
+	color: #4D6F80;
+	text-align: center;
+}
+
 .plain_text {
 	text-align: center;
 	font-size: 0.6em;
@@ -307,7 +313,7 @@ td {
     width: 80vw; /* 80% of the viewport width */
     height: 80vh; /* 80% of the viewport height */
     border-radius: 10px; /* Optional: Rounding the corners */
-    overflow: hidden; /* Make sure content doesn’t overflow */
+    overflow: hidden; /* Make sure content doesn't overflow */
 }
 
 .modal-content {
@@ -547,6 +553,12 @@ ul {
 		font-size: 1em;
 		color: #4D6F80;
 		padding-left: 40px;
+	}
+
+	.h3 {
+		font-size: 1em;
+		color: #4D6F80;
+		text-align: center;
 	}
 
 	.post_container {

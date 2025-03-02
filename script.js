@@ -2,14 +2,24 @@ import { projects } from './projects.js';
 
 let currentProjectIndex = 0; // Track the currently opened project index
 
-document.addEventListener("DOMContentLoaded", () => {
-    const projectContainer = document.getElementById("project-container");
+// At the top of the file, add these variables to track projects by category
+let currentCategory = '';
+let categorizedProjects = {
+    unity: [],
+    javascript: [],
+    dotnet: [],
+    rails: []
+};
 
-    // Loop through the projects array and create the HTML
+// Helper function to create project elements
+function createProjectElements(projects, containerId) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
     projects.forEach((project, index) => {
         const projectDiv = document.createElement("div");
         projectDiv.className = "project";
-        projectDiv.onclick = () => openModal(index); // Ensure openModal is defined
+        projectDiv.onclick = () => openModal(project.category, index); // Pass category and index
 
         if(project.videos != null) {
             projectDiv.innerHTML = `
@@ -18,15 +28,29 @@ document.addEventListener("DOMContentLoaded", () => {
                 Your browser does not support the video tag.
             </video>
             `;
-        }
-        else {
+        } else {
             projectDiv.innerHTML = `
             <img class="thumbnail" src="${project.thumbnail}"></img>
             `;
         }
 
-        projectContainer.appendChild(projectDiv);
+        container.appendChild(projectDiv);
     });
+}
+
+// Main initialization
+document.addEventListener("DOMContentLoaded", () => {
+    // Filter projects by category and store them
+    categorizedProjects.unity = projects.filter(p => p.category === 'unity');
+    categorizedProjects.javascript = projects.filter(p => p.category === 'javascript');
+    categorizedProjects.dotnet = projects.filter(p => p.category === 'dotnet');
+    categorizedProjects.rails = projects.filter(p => p.category === 'rails');
+
+    // Create project elements for each category
+    createProjectElements(categorizedProjects.unity, 'unity-projects');
+    createProjectElements(categorizedProjects.javascript, 'javascript-projects');
+    createProjectElements(categorizedProjects.dotnet, 'dotnet-projects');
+    createProjectElements(categorizedProjects.rails, 'rails-projects');
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -50,22 +74,35 @@ document.addEventListener("DOMContentLoaded", function () {
 // Function to handle left arrow click
 document.getElementById("prev-project").addEventListener("click", function () {
     if (currentProjectIndex > 0) {
-        openModal(currentProjectIndex - 1);
+        openModal(currentCategory, currentProjectIndex - 1);
     }
 });
 
 // Function to handle right arrow click
 document.getElementById("next-project").addEventListener("click", function () {
-    if (currentProjectIndex < projects.length - 1) {
-        openModal(currentProjectIndex + 1);
+    const categoryProjects = categorizedProjects[currentCategory];
+    if (currentProjectIndex < categoryProjects.length - 1) {
+        openModal(currentCategory, currentProjectIndex + 1);
     }
 });
 
 // Define the openModal function
-function openModal(projectIndex) {
-    currentProjectIndex = projectIndex;
+function openModal(category, index) {
+    currentCategory = category;
+    currentProjectIndex = index;
+    const project = categorizedProjects[category][index];
 
-    const project = projects[projectIndex];
+    if (!project) {
+        console.error('Project not found:', category, index);
+        return;
+    }
+
+    // Update navigation buttons visibility
+    const prevButton = document.getElementById("prev-project");
+    const nextButton = document.getElementById("next-project");
+    
+    prevButton.style.visibility = index > 0 ? 'visible' : 'hidden';
+    nextButton.style.visibility = index < categorizedProjects[category].length - 1 ? 'visible' : 'hidden';
 
     // Set the title and description
     document.getElementById("modal-title").innerText = project.title;
@@ -75,12 +112,13 @@ function openModal(projectIndex) {
     const modalMedia = document.getElementById("modal-media");
     modalMedia.innerHTML = '';
 
-    if(project.videos != null) {
+    // Check if project has videos before trying to iterate through them
+    if (project.videos && project.videos.length > 0) {
         project.videos.forEach((videoSrc) => {
             let videoElement = '';
 
-            if (videoSrc.includes('youtube.com') || videoSrc.includes('youtu.be')) {  // If the video is a YouTube URL
-                const videoId = getYouTubeID(videoSrc); // Extract the YouTube video ID
+            if (videoSrc.includes('youtube.com') || videoSrc.includes('youtu.be')) {
+                const videoId = getYouTubeID(videoSrc);
                 videoElement = `
                     <div class="video-container">
                         <iframe src="https://www.youtube.com/embed/${videoId}" 
@@ -90,7 +128,6 @@ function openModal(projectIndex) {
                     </div>
                 `;
             } else {
-                // If it's an MP4 video
                 videoElement = `
                     <video controls muted">
                         <source src="${videoSrc}" type="video/mp4">
@@ -99,46 +136,59 @@ function openModal(projectIndex) {
                 `;
             }
 
-            modalMedia.innerHTML += videoElement; // Append each video element
+            modalMedia.innerHTML += videoElement;
         });
-    }  
+    }
 
     // Load learnings into the modal
     const modalLearnings = document.getElementById("modal-learnings");
     modalLearnings.innerHTML = ""; // Clear existing learnings
-    project.learnings.forEach(learning => {
-        const li = document.createElement("li");
-        li.className = "learnings-list-element"
-        li.innerText = learning;
-        modalLearnings.appendChild(li);
-    });
+    
+    // Check if project has learnings before trying to iterate through them
+    if (project.learnings && project.learnings.length > 0) {
+        project.learnings.forEach(learning => {
+            const li = document.createElement("li");
+            li.className = "learnings-list-element"
+            li.innerText = learning;
+            modalLearnings.appendChild(li);
+        });
+    }
 
-    if(project.images != null) {
+    // Check if project has images before trying to iterate through them
+    if (project.images && project.images.length > 0) {
         project.images.forEach((image) => {
             const imageElement = `
                 <img class="modal-image" src="${image}"></img>
             `;
-            modalMedia.innerHTML += imageElement; // Append each image
+            modalMedia.innerHTML += imageElement;
         });
     }
 
+    // Update click handlers for navigation
+    prevButton.onclick = () => {
+        if (index > 0) openModal(category, index - 1);
+    };
+    
+    nextButton.onclick = () => {
+        if (index < categorizedProjects[category].length - 1) openModal(category, index + 1);
+    };
+
+    // Update keyboard navigation
+    document.onkeydown = (event) => {
+        const categoryProjects = categorizedProjects[category];
+        if (event.key === "ArrowLeft") {
+            if (index > 0) {
+                openModal(category, index - 1);
+            }
+        } else if (event.key === "ArrowRight") {
+            if (index < categoryProjects.length - 1) {
+                openModal(category, index + 1);
+            }
+        }
+    };
+
     // Show the modal
     document.getElementById("modal").style.display = "block";
-}
-
-// Function to handle keydown event for navigating between projects
-function handleKeydown(event) {
-    if (event.key === "ArrowLeft") {
-        // Go to the previous project if not at the start
-        if (currentProjectIndex > 0) {
-            openModal(currentProjectIndex - 1);
-        }
-    } else if (event.key === "ArrowRight") {
-        // Go to the next project if not at the end
-        if (currentProjectIndex < projects.length - 1) {
-            openModal(currentProjectIndex + 1);
-        }
-    }
 }
 
 function getYouTubeID(url) {
@@ -146,8 +196,6 @@ function getYouTubeID(url) {
     const matches = url.match(regex);
     return matches ? matches[1] : null;
 }
-
-document.addEventListener("keydown", handleKeydown);
 
 // Attach openModal to the window object for global access
 window.openModal = openModal;
