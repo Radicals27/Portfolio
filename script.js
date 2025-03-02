@@ -129,7 +129,7 @@ function openModal(category, index) {
                 `;
             } else {
                 videoElement = `
-                    <video controls muted">
+                    <video controls>
                         <source src="${videoSrc}" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
