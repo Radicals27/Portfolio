@@ -374,4 +374,19 @@ export const projects = [
             "First time using dotnet to interact with an API.",
         ]
     },
+    {
+        title: "Full-Stack Employee Management System",
+        description: "(Dotnet & Angular, 2025) A full-stack employee management system that allows users to manage employees, departments and roles.  Uses Angular for the frontend and Dotnet for the backend.",
+        thumbnail: "./posters/dotnetFullStack.png",
+        category: "dotnet",
+        videos: [
+            "https://raw.githubusercontent.com/Radicals27/Portfolio/tree/master/video/DotnetFullStack.mp4"
+        ],
+        images: [
+            "./posters/dotnetFullStack.png",
+        ],
+        learnings: [
+            "First time using dotnet to interact with an API.",
+        ]
+    },
 ];

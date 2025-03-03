@@ -158,7 +158,12 @@ function openModal(category, index) {
     if (project.images && project.images.length > 0) {
         project.images.forEach((image) => {
             const imageElement = `
-                <img class="modal-image" src="${image}"></img>
+                <img class="modal-image" 
+                     src="${image}" 
+                     onclick="window.open('${image}', '_blank')"
+                     style="cursor: pointer;"
+                     title="Click to open in new window"
+                ></img>
             `;
             modalMedia.innerHTML += imageElement;
         });
