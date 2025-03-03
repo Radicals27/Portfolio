@@ -380,13 +380,16 @@ export const projects = [
         thumbnail: "./posters/dotnetFullStack.png",
         category: "dotnet",
         videos: [
-            "https://raw.githubusercontent.com/Radicals27/Portfolio/tree/master/video/DotnetFullStack.mp4"
+            "https://github.com/Radicals27/Portfolio/raw/refs/heads/master/video/DotnetFullStack.mp4"
         ],
         images: [
             "./posters/dotnetFullStack.png",
         ],
         learnings: [
-            "First time using dotnet to interact with an API.",
+            "First time creating a full stack dotnet application.",
+            "First time creating all CRUD operations within dotnet framework.",
+            "First time using Angular for the frontend.",
+            "First time using Entity Framework for database interactions.",
         ]
     },
 ];
