@@ -618,3 +618,13 @@ ul {
 		margin: 4vh;
 	}
 }
+
+.subtitle-link {
+    color: #4D6F80;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.subtitle-link:hover {
+    color: #ff4500;
+}

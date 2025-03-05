@@ -131,7 +131,11 @@ export const projects = [
             "Prototyped several levels.",
             "Implemented 'juice' such as screen shake, dust particles and more.",
             "Implemented player spawn 'skybeam' effect.",
-        ]
+        ],
+        link: {
+            url: "https://store.steampowered.com/app/2514400/Servonauts/",
+            type: "Link"
+        }
     },
     {
         title: "High Voltage Switching",
@@ -181,7 +185,6 @@ export const projects = [
             "Created Audio system and directional arrow system to guide user to face correct direction.",
         ]
     },
-    ,
     {
         title: "Truck Driver Training App",
         description: "(Unity, Mobile, 2020-2021) A training app for truck drivers to ensure safe driving practices. Rolled out nationally to thousands of drivers.",
@@ -284,7 +287,11 @@ export const projects = [
             "Created hand-drawn sprites of each colleague, animated them.",
             "Created custom events that player had to 'fix'.",
             "Sourced and implemented various SFX, music and art assets."
-        ]
+        ],
+        link: {
+            url: "https://petesecretsanta2021.itch.io/pete",
+            type: "Link"
+        }
     },
     {
         title: "Alien Standup",
@@ -301,7 +308,11 @@ export const projects = [
             "Tracked player progress through the app using local storage.",
             "Created database of words for player to play with.",
             "Went through entire project lifecycle from idea, to implementation, to store upload."
-        ]
+        ],
+        link: {
+            url: "https://radicals27.itch.io/alien-standup",
+            type: "Link"
+        }
     },
     {
         title: "Danny's Defense",
@@ -320,7 +331,11 @@ export const projects = [
             "Learned how to use Blender to model, texture and rig a human model as well as a guitar, ping pong paddle, mug, laptop, ginger beer and garlic characters.",
             "100+ hour project, for fun.",
             "Learned a lot about project structure and how to plan for performance."
-        ]
+        ],
+        link: {
+            url: "https://github.com/Radicals27/Danny-Defense",
+            type: "GitHub"
+        }
     },
     {
         title: "Planet Like",
@@ -331,6 +346,10 @@ export const projects = [
             "https://raw.githubusercontent.com/Radicals27/PlanetLike/master/app/assets/images/screenshot02.png",
             "https://raw.githubusercontent.com/Radicals27/PlanetLike/master/app/assets/images/screenshot03.png"
         ],
+        link: {
+            url: "https://github.com/Radicals27/PlanetLike",
+            type: "GitHub"
+        },
         learnings: [
             "First time using user authentication.",
             "First time using Rails",
@@ -339,9 +358,13 @@ export const projects = [
     },
     {
         title: "Game Idea Generator",
-        description: "(Vue/JS, 2020) A random game idea generator to help overcome creative blocks. View the live page here: https://radicals27.github.io/GameIdeaGenerator/",
-        thumbnail: "./posters/gameIdeaGenerator.png",
+        description: "(Vue/JS, 2020) A random game idea generator to help overcome creative blocks.",
         category: "javascript",
+        thumbnail: "./posters/gameIdeaGenerator.png",
+        link: {
+            url: "https://github.com/Radicals27/GameIdeaGenerator",
+            type: "GitHub"
+        },
         images: [
             "https://raw.githubusercontent.com/Radicals27/GameIdeaGenerator/master/1screenshot.png",
         ],
@@ -351,9 +374,13 @@ export const projects = [
     },
     {
         title: "Movie Idea Generator",
-        description: "(Vue/JS, 2020) A random movie idea generator to help overcome creative blocks. View the live page here: https://radicals27.github.io/MoviePlotGenerator/",
-        thumbnail: "./posters/movieIdeaGenerator.png",
+        description: "(Vue/JS, 2020) A random movie idea generator to help overcome creative blocks.",
         category: "javascript",
+        thumbnail: "./posters/movieIdeaGenerator.png",
+        link: {
+            url: "https://github.com/Radicals27/MoviePlotGenerator",
+            type: "GitHub"
+        },
         images: [
             "https://raw.githubusercontent.com/Radicals27/MoviePlotGenerator/master/screenshot.png",
         ],
@@ -372,7 +399,11 @@ export const projects = [
         ],
         learnings: [
             "First time using dotnet to interact with an API.",
-        ]
+        ],
+        link: {
+            url: "https://radicalsmovierecommender-hhg3hadqfkg0htg3.australiaeast-01.azurewebsites.net/",
+            type: "Link"
+        }
     },
     {
         title: "Full-Stack Employee Management System",
@@ -391,5 +422,10 @@ export const projects = [
             "First time using Angular for the frontend.",
             "First time using Entity Framework for database interactions.",
         ]
+        ,
+        link: {
+            url: "https://github.com/Radicals27/employee-management-system",
+            type: "GitHub"
+        }
     },
 ];

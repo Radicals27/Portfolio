@@ -106,7 +106,23 @@ function openModal(category, index) {
 
     // Set the title and description
     document.getElementById("modal-title").innerText = project.title;
-    document.getElementById("modal-description").innerText = project.description;
+
+    // Add link if it exists
+    const modalDescription = document.getElementById("modal-description");
+    if (project.link) {
+        const linkHTML = `
+            <br>
+            <a href="${project.link.url}" 
+               target="_blank" 
+               class="subtitle-link"
+               style="display: inline-block; margin-top: 25px; font-size: 1.2em;">
+                ${project.link.type === "Link" ? "🌐 View Link" : "💻 View on GitHub"}
+            </a>
+        `;
+        modalDescription.innerHTML = project.description + linkHTML;
+    } else {
+        modalDescription.innerHTML = project.description;
+    }
 
     // Load videos into the modal
     const modalMedia = document.getElementById("modal-media");
