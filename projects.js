@@ -428,4 +428,84 @@ export const projects = [
             type: "GitHub"
         }
     },
+    {
+        title: "Calculator",
+        description: "(C# Console, 2024) ",
+        thumbnail: "./posters/cSharpCalculator01.png",
+        category: "dotnet",
+        images: [
+            "./posters/cSharpCalculator01.png",
+            "./posters/cSharpCalculator02.png",
+        ],
+        learnings: [
+            "First time creating a raw C# application.",
+            "First time creating a calculator application.",
+            "First time storing data in a text file.",
+            "Created a command-line interface with multiple options."
+        ],
+        link: {
+            url: "https://github.com/Radicals27/CSharpAcademy/tree/main/Calculator.Radicals27",
+            type: "GitHub"
+        }
+    },
+    {
+        title: "Cocktails API",
+        description: "(C# Console, 2024) ",
+        thumbnail: "./posters/cSharpCocktails01.png",
+        category: "dotnet",
+        images: [
+            "./posters/cSharpCocktails01.png",
+            "./posters/cSharpCocktails02.png",
+            "./posters/cSharpCocktails03.png",
+        ],
+        learnings: [
+            "Interacted with a RESTful API using C#",
+            "Created a command-line interface with multiple options."
+        ],
+        link: {
+            url: "https://github.com/Radicals27/CSharpAcademy/tree/main/Cocktails.Radicals27",
+            type: "GitHub"
+        }
+    },
+    {
+        title: "Coding Tracker",
+        description: "(C# Console, 2024) ",
+        thumbnail: "./posters/cSharpCodingTracker01.png",
+        category: "dotnet",
+        images: [
+            "./posters/cSharpCodingTracker01.png",
+            "./posters/cSharpCodingTracker02.png",
+        ],
+        learnings: [
+            "Created a console application to track coding time.",
+            "Implemented data persistence using SQLite.",
+            "Populated database with sample data.",
+            "Created a command-line interface with multiple options.",
+            "First time using Dapper for database interactions.",
+            "Extensive use of Date Time package.",
+        ],
+        link: {
+            url: "https://github.com/Radicals27/CSharpAcademy/tree/main/CodingTracker.Radicals27/CodingTracker.Radicals27",
+            type: "GitHub"
+        }
+    },
+    {
+        title: "FlashCard App",
+        description: "(C# Console, 2024) ",
+        thumbnail: "./posters/cSharpFlashCards01.png",
+        category: "dotnet",
+        images: [
+            "./posters/cSharpFlashCards01.png",
+            "./posters/cSharpFlashCards02.png",
+        ],
+        learnings: [
+            "Created an MVC application for flashcard learning.",
+            "Implemented data persistence using SQLite.",
+            "Allowed for making flashcard stacks as well as flashcards within the stack.",
+        ],
+        link: {
+            url: "https://github.com/Radicals27/CSharpAcademy/tree/main/FlashCards.Radicals27",
+            type: "GitHub"
+        }
+    }
 ];
